@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1>Attendance sheet</h1>
+
+<%= form_with url: attendance_register_path do |form| %>
+    <p>
+      <strong>Date:</strong>
+      <%= form.date_select :date %>
+    </p>
+
+    <p>
+      <strong>Hours:</strong>
+      <%= form.text_field :hours %>
+    </p>
+
+    <table>
+      <thead>
+      <tr>
+        <td>Name</td>
+        <td>Graduation</td>
+        <td></td>
+      </tr>
+      </thead>
+      <tbody>
+      <% @students.each do |student| %>
+          <tr>
+            <td><%= student.name %></td>
+            <td><%= student.graduation %></td>
+            <td><%= button_to '✓', attendance_register_path, params: { student_id: student.id } %><td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% end %>
