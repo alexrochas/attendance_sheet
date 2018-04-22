@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attendance report</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Graduation</th>
+      <th>Hours</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.graduation %></td>
+        <td><%= student.presences.pluck(:hours).sum %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

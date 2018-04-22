@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'attendance/report'
+
   get 'attendance/sheet'
   post 'attendance/register'
 

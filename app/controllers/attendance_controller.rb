@@ -9,6 +9,10 @@ class AttendanceController < ApplicationController
     flash[:success] = 'New entry registered with success!'
   end
 
+  def report
+    @students = Student.all
+  end
+
   private
     def convert_date(hash, date_symbol_or_string)
       attribute = date_symbol_or_string.to_s
