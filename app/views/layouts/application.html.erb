@@ -16,48 +16,30 @@
 </head>
 <body>
 
-<header class="site-header push">This is a header</header>
+<header class="site-header push">Attendance Sheet</header>
 
 <!-- Pushy Menu -->
 <nav class="pushy pushy-left" data-focus="#first-link">
   <div class="pushy-content">
     <ul>
+      <li class="pushy-link">
+        <a href="<%= attendance_sheet_path%>" id="first-link">Sheet</a>
+      </li>
       <li class="pushy-submenu">
-        <button id="first-link">Submenu 1</button>
+        <a href="<%= attendance_report_path %>" id="first-link">Report</a>
+      </li>
+      <li class="pushy-submenu">
+        <button>Students</button>
         <ul>
-          <li class="pushy-link"><a href="#">Item 1</a></li>
-          <li class="pushy-link"><a href="#">Item 2</a></li>
-          <li class="pushy-link"><a href="#">Item 3</a></li>
+          <li class="pushy-link"><a href="<%= students_path %>">Show all</a></li>
         </ul>
       </li>
       <li class="pushy-submenu">
-        <button>Submenu 2</button>
+        <button>Presences</button>
         <ul>
-          <li class="pushy-link"><a href="#">Item 1</a></li>
-          <li class="pushy-link"><a href="#">Item 2</a></li>
-          <li class="pushy-link"><a href="#">Item 3</a></li>
+          <li class="pushy-link"><a href="<%= presences_path %>">Show all</a></li>
         </ul>
       </li>
-      <li class="pushy-submenu">
-        <button>Submenu 3</button>
-        <ul>
-          <li class="pushy-link"><a href="#">Item 1</a></li>
-          <li class="pushy-link"><a href="#">Item 2</a></li>
-          <li class="pushy-link"><a href="#">Item 3</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <button>Submenu 4</button>
-        <ul>
-          <li class="pushy-link"><a href="#">Item 1</a></li>
-          <li class="pushy-link"><a href="#">Item 2</a></li>
-          <li class="pushy-link"><a href="#">Item 3</a></li>
-        </ul>
-      </li>
-      <li class="pushy-link"><a href="#">Item 1</a></li>
-      <li class="pushy-link"><a href="#">Item 2</a></li>
-      <li class="pushy-link"><a href="#">Item 3</a></li>
-      <li class="pushy-link"><a href="#">Item 4</a></li>
     </ul>
   </div>
 </nav>
@@ -69,12 +51,24 @@
 <div id="container">
   <!-- Menu Button -->
   <button class="menu-btn">&#9776; Menu</button>
-
-  <%= yield %>
+  <div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+      <%= yield %>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
 
 </div>
 
-<footer class="site-footer push">This is a footer</footer>
+<footer class="site-footer push">
+  <p>
+    Alex Rocha - <a href="https://about.me/alex.rochas">about.me</a>
+  </p>
+
+</footer>
 
 <%= javascript_include_tag 'pushy.min' %>
 

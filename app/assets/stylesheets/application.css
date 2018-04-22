@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require _bootstrap-grid
  *= require demo
  *= require normalize
  *= require pushy
