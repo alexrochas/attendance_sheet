@@ -15,5 +15,5 @@
  *= require _bootstrap-grid
  *= require demo
  *= require normalize
- *= require pushy
+ *= require pushy.scss
  */
