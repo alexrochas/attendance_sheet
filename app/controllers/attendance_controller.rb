@@ -6,7 +6,7 @@ class AttendanceController < ApplicationController
   def register
     puts params
     Presence.new(student_id: params[:student_id], hours: params[:hours], date: convert_date(params, :date)).save
-    flash[:success] = 'New entry registered with success!'
+    redirect_to attendance_sheet_path, notice: 'New entry registered with success!'
   end
 
   def report
