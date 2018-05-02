@@ -38,24 +38,30 @@
 <nav class="pushy pushy-left" data-focus="#first-link">
   <div class="pushy-content">
     <ul>
-      <li class="pushy-submenu">
-        <a href="<%= attendance_sheet_path%>" id="first-link">Sheet</a>
-      </li>
+      <% if current_user.try(:admin?) %>
+        <li class="pushy-submenu">
+          <a href="<%= attendance_sheet_path%>" id="first-link">Sheet</a>
+        </li>
+      <% end %>
       <li class="pushy-submenu">
         <a href="<%= attendance_report_path %>" id="first-link">Report</a>
       </li>
-      <li class="pushy-submenu">
-        <button>Students</button>
-        <ul>
-          <li class="pushy-link"><a href="<%= students_path %>">Show all</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <button>Presences</button>
-        <ul>
-          <li class="pushy-link"><a href="<%= presences_path %>">Show all</a></li>
-        </ul>
-      </li>
+      <% if current_user.try(:admin?) %>
+        <li class="pushy-submenu">
+          <button>Students</button>
+          <ul>
+            <li class="pushy-link"><a href="<%= students_path %>">Show all</a></li>
+          </ul>
+        </li>
+      <% end %>
+      <% if current_user.try(:admin?) %>
+        <li class="pushy-submenu">
+          <button>Presences</button>
+          <ul>
+            <li class="pushy-link"><a href="<%= presences_path %>">Show all</a></li>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

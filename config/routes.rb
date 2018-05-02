@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'attendance/sheet'
   post 'attendance/register'
 
-  root 'attendance#sheet'
+  root 'attendance#report'
 
   resources :students
   resources :presences
