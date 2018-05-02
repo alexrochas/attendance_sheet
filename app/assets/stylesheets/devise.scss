@@ -1,0 +1,16 @@
+.login {
+    position: absolute;
+    margin: 0px;
+    right: 0px;
+    padding: 20px;
+}
+
+.login a {
+  color: #b3b3b1;
+  background: transparent;
+  border: 0;
+
+  &:hover{
+    color: #FFF;
+  }
+}
