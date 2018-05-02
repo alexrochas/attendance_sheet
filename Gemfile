@@ -60,6 +60,7 @@ gem 'devise'
 gem 'high_voltage'
 
 group :development do
+  gem 'foreman'
   gem 'better_errors'
   gem 'hub', :require=>nil
   gem 'rails_apps_pages'

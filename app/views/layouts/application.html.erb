@@ -62,6 +62,14 @@
           </ul>
         </li>
       <% end %>
+      <% if current_user.try(:admin?) %>
+        <li class="pushy-submenu">
+          <button>Users</button>
+          <ul>
+            <li class="pushy-link"><a href="<%= users_path %>">Show all</a></li>
+          </ul>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

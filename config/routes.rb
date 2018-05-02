@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   devise_for :users
   get 'attendance/report'
 
@@ -6,6 +8,8 @@ Rails.application.routes.draw do
   post 'attendance/register'
 
   root 'attendance#report'
+
+  match '/users',   to: 'users#index',   via: 'get'
 
   resources :students
   resources :presences
