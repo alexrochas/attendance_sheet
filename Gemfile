@@ -8,7 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby '2.3.1'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 7.1.5', '>= 7.1.5.2'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -53,7 +53,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'administrate'
+gem 'administrate', '>= 0.12.0'
 gem 'bootstrap', '~> 4.0.0'
 gem 'bourbon'
 gem 'devise'
